@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Henry Orsagh - Trials of Persephone</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../../css/flaticon.css">
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <link rel="stylesheet" href="../../css/style.css">
+	
+	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" onload="onLoad()">
+	  <!-- External libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.8/browser/pixi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+<!-- My JS files -->
+<script src="js/utilities.js"></script>
+<script src="js/classes.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/main.js"></script>
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="../index.html">Henry Orsagh</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="../index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="../index.html#skills-section" class="nav-link"><span>Skills</span></a></li> 
+			  <li class="nav-item"><a href="../index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="../index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero" style="background-image: url(../../images/clonemenu.png); background-size: cover; background-position: center;">
+		  <div class="home-slider  owl-carousel">
+	      <div class="slider-item ">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }" >
+					<div class="text">
+						<span class="subheading"></span>
+					  <h1 class="mb-4 mt-3"><span>Clone!</span></h1>
+					  <h2 class="mb-4">Web Puzzle Game</h2>
+				  </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="game-section">
+		<div class="container">
+  
+		  <div class="row d-flex contact-info mb-5">
+			<div class="col d-flex ftco-animate">
+			</div>          
+			<div class="col d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div id="game">
+					<!--Game-->
+				</div>
+			  </div>
+		  </div> 
+			<div class="col d-flex ftco-animate">
+				</div>
+			</div>
+		  </div>
+	  </section>
+	<section class="ftco-section" style="padding-top: 0;">
+		<div class="container">
+		  <div class="row">
+			<div class="col ftco-animate">
+
+			  <h2 class="mb-3">Controls</h2>
+			  <p>Move with W A S D. Press E to create a clone. If a shrogg sees you in it's vision, it will win! outsmart them with your clones, and reach the blue portal to go to the next level. Good Luck!</p>
+			  <h2 class="mb-3">My Process</h2>
+
+            <p>This project was a large undertaking for how little time I had to make it. That being said, I used the time I had efficiently and faced a number of challenges along the way.</p>
+
+            <p>The first aspect I dealt with was visuals- I drew my own spritesheets in Photoshop, which took me a while to get my process down, but once I got into a groove it went by pretty quickly. Establishing my visual style early allowed me to skip the greyboxing phase, which saved me a lot of time on this short project.</p>
+            
+            <p>The next step was to get the player working. Developing the movement mechanics and collision detection was pretty straightforward, as it’s something I’ve done many times before. Getting the animations working gave me a bit of trouble, as I was unfamiliar with pixiJS’ animated sprites, but with some trial and error I was able to get it working in a way I was happy with. Next was the cloning mechanic. I tested a few different implementations, before settling on the one used now.</p>
+            
+            <p>Next I developed the enemies, the Shroggs. I was running out of time, so instead of giving the Shroggs a cone for their sightlines, I stuck to what I knew how to do and used circle circle collision detection, and then I wrote my own line trace function to check for line of sight.</p>
+            
+            <p>Because of how I wrote my collision detection and how I made my sprites, developing the levels was really easy. However, after finishing the first level I realized that I hadn’t included a way to get to the next level. I drew a simple sprite for a portal, and brought it in.</p>
+            
+            <p>Something that I wish I would've done that I didn't was get pixiJS working on Live Server. I pushed every little change to the server in order to test it, which in the long run probably cost me a lot of time that I could've spent fixing bugs and developing more features.</p>                
+
+            
+        </div>
+			  </div>
+		  </div>
+		</div>
+	  </section>
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../../js/popper.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="../../js/jquery.easing.1.3.js"></script>
+  <script src="../../js/jquery.waypoints.min.js"></script>
+  <script src="../../js/jquery.stellar.min.js"></script>
+  <script src="../../js/owl.carousel.min.js"></script>
+  <script src="../../js/jquery.magnific-popup.min.js"></script>
+  <script src="../../js/aos.js"></script>
+  <script src="../../js/jquery.animateNumber.min.js"></script>
+  <script src="../../js/scrollax.min.js"></script>
+  
+  <script src="../../js/main.js"></script>
+    
+  </body>
+</html>

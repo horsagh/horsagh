@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+    <title>D&D Encounter Builder</title>
+
+    <link rel="stylesheet" href="css/encounterBuilder.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    
+        <div id="bestiary">
+            <h2>Bestiary</h2>
+            <input type="text" id="searchterm">
+    
+            <button type="button" id="search">Search</button>
+    
+    
+            <div id="filters">
+                <select id="cr">
+                    <option value="" selected>CR</option>
+                    <option value="0">0</option>
+                    <option value="1/8">1/8</option>
+                    <option value="1/4">1/4</option>
+                    <option value="1/2">1/2</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="18">17</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="28">27</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+    
+                <select id="type">
+                    <option value="" selected>Type</option>
+                    <option value="aberration">Aberration</option>
+                    <option value="beast">Beast</option>
+                    <option value="celestial">Celestial</option>
+                    <option value="construct">Construct</option>
+                    <option value="dragon">Dragon</option>
+                    <option value="elemental">Elemental</option>
+                    <option value="fey">Fey</option>
+                    <option value="fiend">Fiend</option>
+                    <option value="giant">Giant</option>
+                    <option value="humanoid">Humanoid</option>
+                    <option value="monstrosity">Monstrosity</option>
+                    <option value="ooze">Ooze</option>
+                    <option value="plant">Plant</option>
+                    <option value="undead">Undead</option>
+                </select>
+    
+                <select id="doc">
+                    <option value="" selected>Document</option>
+                    <option value="wotc-srd">SRD</option>
+                    <option value="tob">Tome of Beasts</option>
+                    <option value="cc">Creature Codex</option>
+                </select>
+            </div>
+    
+            <span id="searchresults">  </span>
+            <div id="monsters"></div>
+        </div>
+    <header>
+        <h1>D&D Encounter Builder</h1>
+    </header>
+    
+    <main>
+    <div id="combat">
+        <h3>VS</h3>
+        <div id="sides">
+        <div id="party">
+            Players: 
+            <select id="playercount">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="18">17</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+            <br>
+            Level: 
+            <select id="playerlevel">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="18">17</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+
+        <div id="combatMonsters"></div>
+        </div>
+        <div id="encounterdiff">Add monsters to see difficulty rating.</div>
+    </div>
+
+    
+    </main>
+    <footer>
+        Created by Henry Orsagh using the Open 5e API.
+        2022
+    </footer>
+</body>
+</html>
